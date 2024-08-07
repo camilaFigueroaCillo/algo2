@@ -79,9 +79,5 @@ func EsCadenaCapicua(cadena string) bool {
 		return true
 	}
 	cadenaInvertida := EsCapicuaRec(cadena, len(cadena)-1)
-	if cadena == cadenaInvertida {
-		return true
-	} else {
-		return false
-	}
+	return cadena == cadenaInvertida
 }
