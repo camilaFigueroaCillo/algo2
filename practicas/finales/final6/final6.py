@@ -76,10 +76,6 @@ Guyana(6), Paraguay(8)] """
 #Paraguay, Ecuador, Venezuela, Bolivia, Colombia, Brasil, Argentina, Uruguay, Surinam, Guyana
 #Argentina,Bolivia,BRasil, Colombia, Ecuador, Guyana, Paraguay, Surinam, Uruguay, Venezuela
 
-#Yo lo resolveria haciendo un bucket con los paises que tienen la misma cantidad de letras y ordeno por ese 
-# digito, lo junto con los del digito anterior a ese y ordeno ese array parcial y asi sucesivamente 
-# hasta juntar todo el array.
-# 
 
 
 
