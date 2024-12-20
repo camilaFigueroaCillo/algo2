@@ -76,9 +76,7 @@ func busquedaBinaria(arr []int, elem, ini, fin int) int {
 }
 
 
-/*La complejidad de este algoritmo es O(log(n) * (2 log(n)) ), lo que seria O(2log²(n)) que por propiedad de logaritmos
-nos quedaria O(4log(n)) y como la notación desprecia las constantes entonces la complejidad del algoritmo es:
-O(log(n))
+/*La complejidad de este algoritmo es O(log(n) * (2 log(n)) ), lo que seria O(2log²(n)) == O(log²(n)) < O(n)
 */
 
 /*Bárbara está trabajando para una marca de ropa.
@@ -134,13 +132,13 @@ en vez de implementarlo con, valga la redundancia, árboles?*/
 /* Primero, sabemos que implementar el heap con un arreglo funciona porque 1) es un arbol izquierdista y 2) dado un 
 elemento del heap, sabemos que su hijo izquierdo es un heap, y su hijo derecho es un heap. POr lo que la formula
 para encontrar los hijos en el arreglo funcionan. 
-Ahora que pasa con el ABB, El abb tiene una propiedad similar pero no la misma al heap, que es: "mi hijo izquierdo es menor a mi
-y mi hijo derecho es mayor a mi."
+Por otro lado, el abb tiene una propiedad similar pero no la misma al heap, que es: "mi hijo izquierdo es menor a mi
+y mi hijo derecho es mayor a mi. Esto puede hacer que un abb quede muy desbalanceado y la representación en un arreglo sea ineficiente."
 
 Por un lado, tratar de mantener un arbol izquierdista con una comparacion que depende del usuario, seguramente no sea
 muy simple, mas allá de eso, el heap trabaja con las operatorias 'upheap' y 'downheap' donde upheap sube el elemento
 hasta que encuentre un padre mayor y downheap baja el elemento hasta que no tenga hijos o su hijo sea menor
-con el abb esto no seria posible porque podria terminar en un lugar donde no corresponderia y nos arruinaria el orden
+con el abb esto no seria posible porque podria terminar en un lugar que no corresponda y se arruinaria el orden
 
 */
 
