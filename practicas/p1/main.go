@@ -76,15 +76,4 @@ func countingSort(arr string, rango int, criterio int) {
 }*/
 
 func main(){
-	p1 := Personas{"camila", 1}
-	p2 := Personas{"facu", 60}
-	p3 := Personas{"joa", 47}
-	p4 := Personas{"ani",1}
-	p5 := Personas{"belu",5}
-	arr := []Personas{p1,p4,p5,p3,p2}
-	arr2 := buscarCumples(1, arr)
-	fmt.Println(arr2)
-
-
-
 }
