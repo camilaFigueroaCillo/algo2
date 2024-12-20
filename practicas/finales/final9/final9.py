@@ -8,10 +8,9 @@ mejor a O(n log n).
 auxiliar de RadixSort?
 """
 
-#Lo que puedo decir sobre la afirmacion es que para que ordene mejor que O(nlogn) entonces el algoritmo deberia ser 
-#no comparativo, porque de otra manera, esta afirmación sería falsa, puesto que no hay manera de ordenar comparativamente
-#En tiempo mejor a O(nlogn).
-#Sem podría utilizar como algoritmo auxiliar de RadixSort si y solo si el agoritmo es estable, si no lo es, entonces no
-#Porque Radix, no ordena si no usamos un algoritmo auxiliar estable.
+#Para que ordene mejor que O(nlogn) entonces el algoritmo deberia ser no comparativo, porque de otra manera, esta afirmación sería falsa,
+#puesto que no hay manera de ordenar comparativamente en tiempo mejor a O(nlogn).
+#Se podría utilizar como algoritmo auxiliar de RadixSort si el agoritmo es estable, si no lo es, entonces no porque Radix, no ordena si 
+# no se usa un algoritmo auxiliar estable.
 
 
