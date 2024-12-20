@@ -7,10 +7,9 @@ en tiempo O(V + E).  Justificar la complejidad de la función implementada.
 Dado que dicho algoritmo es lineal, ¿por qué no lo aplicamos para el caso general, en vez de utilizar otros 
 algoritmos (por ejemplo, Dijkstra)?"""
 
-#No lo aplicamos en el caso general porque no tenemos informacion sobre los pesos de las aristas siempre
-#En este caso sabiamos que los pesos eran 1 y 2, pero en el supuesto caso de que el peso sea un flotante, como lo representaria?
+#No se aplica en el caso general porque no se tiene informacion sobre los pesos de las aristas.
+#En este caso se sabia que los pesos eran 1 y 2, pero en el supuesto caso de que el peso sea un flotante, no se podria representar
 #O si el peso de una arista fuese 10000 estaria consumiendo una cantidad de espacio muy grande y no conviene
-#Por otro lado, es muy tediosa esta manera y se es propenso a cometer errores.
 
 def caminos_minimos(grafo, v):
     nuevo_grafo = Grafo(False, grafo.obtener_vertices())
@@ -62,11 +61,11 @@ Explicar detalladamente cómo modelarías este problema con grafos, y cómo obte
 compilar el proyecto entero (de forma correcta). 
 Indicar la complejidad de lo definido, en función de las variables del problema."""
 
-#Este problema lo modelaria con un grafo dirigido de manera que cada vértice sea cada modulo y que las aristas 
+#Este problema se puede modelar con un grafo dirigido de manera que cada vértice sea cada modulo y que las aristas 
 # indiquen las dependencias, en este caso: "Si modulo A depende del B" entonces existiria un vertice B, un vertice A
-#y una arista que vaya de B hasta A. Luego, para obtener el orden correcto de compilacion, usaria un orden topológico
-#el cual me daria en tiempo lineal, que archivos compilar primero, cuales despues y asi..
-#Entonces si llamamos M a la cdad de modulos, y D a la cdad de dependencias, estariamos diciendo que la complejidad
+#y una arista que vaya de A hasta B. Luego, para obtener el orden correcto de compilacion, se utiliza un orden topológico
+#el cual daria en tiempo lineal el orden de compilación de los archivos.
+#Entonces sea M a la cdad de modulos, y D la cdad de dependencias, estariamos diciendo que la complejidad
 #del algoritmo es O(M+D).
 
 def g_ent(grafo):
