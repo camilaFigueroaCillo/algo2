@@ -35,24 +35,6 @@ func sumasMax(arr []int, k int) []int {
 	return res
 }
 
-
-/*Para implementar un TDA Cola de prioridad, nos proponen la siguiente solución: usar un arreglo
-desordenado (arr) para insertar los datos, y una variable (maximo) para poder obtener el máximo en
-O(1). Se mantiene actualizada la variable maximo cada vez que se encola o desencola. ¿Es una buena
-solución en el caso general? Justificar (recomendación: comparar contra la implementación de colas
-de prioridad vista en clase).
-
-A mi parecer no es una buena implementacion porque si bien yo voy a tener el valor del maximo para tenerlo a mano siempre
-no tengo su indice en el array, por lo que al desencolar deberia buscar en el array ese elemento, sacarlo cuidar de no romper el array
-porque puede estar en el medio y deberia correr los elementos de lugar, por lo que seria no solo mas complicado si no tambien
-ineficiente al momento de desencolar, pues en el peor caso el maximo quedo en el ultimo lugar y voy a tener que hacer una 
-busqueda lineal del maximo para desencolarlo
-Tambien digamos, como calculo los hijos si el array esta desordenado? se romperia la propiedad del heap si yo al calcular un hijo es mayor a mi 
-pero luego resulta que en realidad ese no es mi hijo y etc.
-*/
-
-
-
 /*Implementar una función que reciba K listas ordenadas de enteros, cada una con una misma longitud
 n, y combine estas listas en una única lista ordenada evitando repetidos (ninguna lista original tiene
 repetidos, pero sí puede suceder que dos listas diferentes tengan un mismo valor). Indicar y justificar
