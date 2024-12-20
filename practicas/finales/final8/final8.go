@@ -48,7 +48,7 @@ type cola[T any] struct {
 }
 
 func (cola *cola[T]) Filter(f func(T) bool) Cola[T] {
-	otra := &cola[T]{0, 0, make([]T, cola.cantidad)} //con esto me aseguro de no redimensionar ni tener que llenar el array desde el inicio hasta otra pos
+	otra := &cola[T]{0, 0, make([]T, cola.cantidad)} 
 	for i := cola.primero; i < len(cola.datos); i++ {
 		if !f(cola.datos[i]) {
 			continue
