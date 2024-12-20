@@ -31,7 +31,7 @@ def obtenerAristas(grafo):
 #Ordenamos las aristas, esto es O(ElogV), luego vemos todas las aristas y por cada arista realizamos 2 finds, 
 #y si lo requerimos una union y agregamos un arista al arbol, agregar una arista es constante mientras que la complejidad
 #de unionfind es O(inv(ackermann)) que como la funcion de ackermann es una funcion que crece muy rápido
-#la inversa crece muy lento, casi que se considera constante, por lo que los unico que nos esta costando en este algoritmo
+#la inversa crece muy lento, casi que se considera constante, por lo que los unico que cuesta en este algoritmo
 #es ordenar las aristas por su peso.
 
 
