@@ -12,10 +12,10 @@ cuatrimestres anteriores. Pueden asumir que agus9900 es tan genio que aprobó to
 función de la cantidad de materias del plan de estudios, y la cantidad de correlatividades.
 Tarea para el hogar: para aprender más del lore de FIUBA, pueden leer sobre el legendario"""
 
-#Para resolver este problema, modelo un grafo dirigido cuyos vertices representen las materias y las agregar_aristas representan
+#Para resolver este problema,se modela un grafo dirigido cuyos vertices representen las materias y las aristas representen
 #Las correlatividades
-#Entonces para Analisis Algebra Proba, existe agregar_arista desde analisis a proba, desde algebra a proba pero no desde analisis a algebra ni viceversa
-#Luego realizo un orden topológico para obtener el orden de los que puedo ir cursando
+#De manera que para las materias 'Analisis' 'Algebra' 'Proba', existe arista desde analisis a proba, desde algebra a proba pero no desde analisis a algebra ni viceversa
+#Luego se realiza un orden topológico para obtener el orden de las materias a cursar
 
 def grados_entrada(grafo):
     g = {v: 0 for v in grafo}
