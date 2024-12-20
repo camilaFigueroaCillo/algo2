@@ -39,10 +39,10 @@ Para esto, primero modelar el problema con grafos, y luego implementar un algori
 devuelva los bloqueos a eliminar. 
 Indicar y justificar la complejidad del algoritmo implementado."""
 
-#Para este problema, modelo un grafo no dirigido cuyos vertices sean los lugares a los que quiero llegar y las aristas representan
+#Para este problema, se modela un grafo no dirigido cuyos vertices sean los lugares a los que quiero llegar y las aristas representen
 #el camino. Si el camino esta bloqueado entonces esa arista sera pesada, si no, será no pesada. Luego para encontrar
-#Que bloqueos deberia remover aplico un algoritmo de kruskal para encontrar el arbol de tendido minimo del grafo, esto
-#nos dará las aristas que nos cuestan menos y con las cuales podemos conectar todas las ciudades con todas.
+#Que bloqueos deberia remover se aplica el algoritmo de kruskal para encontrar el arbol de tendido minimo del grafo, esto
+# dará las aristas que cuestan menos y con las cuales se pueden conectar todas las ciudades con todas.
 
 def caminos_rurales(grafo):
     mst = kruskal(grafo)
