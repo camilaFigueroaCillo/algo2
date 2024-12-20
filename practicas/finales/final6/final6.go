@@ -26,8 +26,8 @@ func join(cadenas []string) string {
 
 */
 
-//En la implementacion de alan podemos ver que por cada cadena, concatena lo anterior con la cadena, a simple vista
-//Uno diria que es O(k*(m+n)), por cada cadena realiza una operacion de complejidad O(n+m). 
+//En la implementacion de alan se puede ver que por cada cadena, se concatena lo anterior con la cadena, a simple vista
+//Podria ser O(k*(m+n)), por cada cadena realiza una operacion de complejidad O(n+m). 
 //Pero, nos estariamos olvidando que la longitud de res, a medida que vamos recorriendo el arreglo de cadenas va aumentando
 //POr lo tanto, con k cdad de cadenas y largo de las cadenas = m
 //en la primer iteracion tendriamos O(0+m) len(res) = m
@@ -36,8 +36,6 @@ func join(cadenas []string) string {
 //y asi hasta k donde tendriamos O((k-1)*m + m) ahora len(res) = k*m
 
 //En total la complejidad seria O(k*(k*m)) = O(k*n)
-
-//Yo lo arreglaria con esta implementacion
 
 func join(cadenas []string) string {
 	largo := len(cadenas[0]) //O(1)
@@ -53,30 +51,27 @@ func join(cadenas []string) string {
 	return string(res) //O(n)
 }
 
-//Analicemos complejidad: en el for, recorremos cada clave, por cada clave realizamos 2 operaciones que cuestan m
+//Analisis de complejidad: en el for, recorremos cada clave, por cada clave realizamos 2 operaciones que cuestan m
 //Osea el largo de la cadena, entonces el for nos estaria costando O(k*m) = O(n), por lo que toda esta funcion 
 //Cuesta O(n)
 //
-
-
 
 /*Existe una estructura llamada dequeue (Double-Ended Queue), que es como una pila y una cola en simultáneo: 
 permite insertar al principio y al final, y eliminar tanto al principio como al final. 
 Todas esas operaciones, en O(1). ¿Cómo implementarías dicha estructura? 
 Definir detalladamente.*/
 
-//Esta estructura la implementaria con una estructura enlazada, donde me voy a guardar las referencias al primero 
-//Y al ultimo como en una lista enlazada.
-//Entonces ver el primer elemento(como en la cola) es el primer elemento que inserte, y es O(1)
-//Ver el tope(pila) es el ultimo elemento que inserte
-//Si quiero encolar o apilar, lo que hago es insertar el final y cambiar la referencia al ultimo
-//Si quiero desencolar elimino el primero y cambio la referecia
-//Si quiero desapilar, elimino el ultimo y cambio la refe
-//Y si quisiese saber si esta vacia, pregunto si la cantidad es igual a 0 y ya.(para esto siempre me guardo la refe a cdad y la voy actualizando)
-//Entonces mi implemnetacion de DEQUEUE tendria como primitivas:
+//Esa estructura se podría implementar con una estructura enlazada, donde se guardarian las referencias al primer
+//Y al ultimo elemento, tal como en una lista enlazada.
+//Entonces ver el primer elemento(como en la cola) es el primer elemento que se inserto, y es O(1)
+//Ver el tope(pila) es el ultimo elemento que se insertó, también O(1)
+//Para encolar o apilar, se inserta al final y cambia la referencia al ultimo
+//Para desencolar se elimina el primero y se cambia la referecia
+//Para desapilar, se elimina el ultimo y se cambia la referencia
+//Para saber si esta vacia, pregunto si la cantidad es igual a 0 y ya.(para esto se guarda la refe a cdad y se va actualizando)
+//Por lo que la implemnetacion de DEQUEUE tendria como primitivas:
 //VerTope(), VerPrimero(), Encolar(), Desencolar(), Apilar(), Desapilar(), EstaVacia()
 //Todas funcionando en O(1)
-
 
 func main() {
 	arr := []string{"hola", "como", "esta"}
