@@ -66,17 +66,14 @@ Carlos en su segunda semana de trabajo. En este ejercicio, te toca hacer de Alan
 Escribir una explicación de por qué esto que está haciendo Carlos está mal. Considerá que Carlos es muy testarudo
 (incluso, a pesar de su propio bien), así que tu argumentación deberá ser muy clara y contundente."""
 
-#La primitiva 'Redimensionar' publica está mal debido a que la redimension es algo interno del TDA y el usuario
-#No deberia 'saber' como esta implementado, es el principio de la abstraccion.
-#Si barbara quiere un TDA Gatito, no le interesa saber como esta implementado, solo quiere saber que funcione
-#como ella lo pidio y que sea rápido. 
-#Ahora si en implementacion Carlos decidió que ese tda sea de manera que se deba redimensionar
-#Sera algo que carlos deba manejar internamente.
-#POr otro lado, si le damos la opcion al usuario de estar en contacto con una primitiva privada del tda, podria 
-#INgresar algo que nos pueda romper el tda, y no queremos eso.
-#POr ultimo, sabemos que un tda es una estructura que modela algo, y tiene un comportamiento el cual se maneja con
-#Primitivas, enm este caso, la redimension no es alguna primitiva que modele el comportamiento del gatito
-#si no que tiene que ver con el funcionamiento del TDA por lo que esta mal.
+# La primitiva 'Redimensionar' publica está mal debido a que la redimension es algo interno del TDA y el usuario no deberia conocer
+# como esta implementado, es el principio de la abstraccion.
+# Si barbara quiere un TDA Gatito, no le interesa saber como esta implementado, solo quiere que funcione
+# como ella lo pidio y que sea rápido. 
+# Si en la implementación Carlos decidió que ese tda sea de manera que se deba redimensionar, entonces sera algo que carlos deba manejar 
+# internamente.
+#Por último, si le damos la opcion al usuario de estar en contacto con una primitiva privada del tda, podria 
+#ingresar algo que pueda romperlo.
 
 
 
