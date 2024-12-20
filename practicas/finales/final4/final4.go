@@ -96,12 +96,12 @@ func countingSort(arr []Cancion, criterio func(a Cancion) int, rango, digito int
 	copy(arr, res)
 }
 
-/*Para ordenar implemente un radix por digito de los años, del menos significativo al mas significativo, 
+/*Para ordenar, se implementa un radix-sort por digito de los años, del menos significativo al mas significativo, 
 es decir de las unidades a las unidades de mil.
 La complejidad de este algoritmo es O(4*n) lo que terminaria siendo O(n)
-Si quisiesemos ordenar canciones desde la era de los dinosaurios, tambien funcionaria el radixsort por digito
-la unica diferencia que haria es usar un bucketSort para separar entre los años antes de cristo y despues de cristo
-entonces ordeno un balde luego otro y luego junto los resultados
+Si se quisiera ordenar canciones desde la era de los dinosaurios, tambien funcionaria el radixsort por digito
+la unica diferencia, seria primero usar un bucketSort para separar entre los años antes de cristo y despues de cristo
+de manera de ordenar un balde  y luego otro para finalmente juntar los resultados
 */
 
 
