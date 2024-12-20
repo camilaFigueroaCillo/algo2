@@ -29,12 +29,7 @@ func EstaOrdenada(p TDAPila.Pila[int]) bool {
 
 //Este algoritmo es O(n) porque va desapilando elemento por elemento y comparandolo con el tope de la pila 
 //Una vez que termina de analizar si la pila esta ordenada, vuelve a apilar los elementos en la pila original
-//LO que nos daria una complejidad temporal de 2O(n), pero como se desprecian las constantes, este algoritmo tiene una complejidad de O(n)
-
-
-
-
-
+//Esto seria O(2n), pero como se desprecian las constantes, este algoritmo tiene una complejidad de O(n)
 
 /*Implementar una primitiva para una Cola implementada como una estructura en arreglo (como la vista en clase), 
 Filtrar[T](func condicion(T) bool) Cola[T] que devuelva una nueva cola para la cual los elementos de la cola 
@@ -42,12 +37,10 @@ original dan true en la función condicion pasada por parámetro. La cola origin
 elementos de la final deben tener el orden relativo que tenían en la original. Indicar y justificar la 
 complejidad del algoritmo implementado.*/
 
-//Lo realizo como funcion de una cola enlazada porque queiro y puedo :)//
-
-/*Este algoritmo es lineal debido a que primero desencolo todos los elementos y los encolo a una auxiliar 2 O(n) 
-luego, voy desencolando los elementos de la auxiliar, evaluo con la funcion y si da true lo encolo a am abas colas y si da false solo en la cola original
-por ultimo devuelvo la nueva cola, en total 3. O(n) + O(1) , como se desprecian las constantes == O(N) */
-
+/*Este algoritmo es lineal debido a que primero se desencolan todos los elementos y se encolan a una auxiliar O(2n) 
+luego, se van desencolando los elementos de la auxiliar, se evalua con la funcion y si da true se encolan ambas colas y si da false
+solo en la cola original
+por ultimo se retorna la nueva estructura, en total O(3n) + O(1) , como se desprecian las constantes == O(N) */
 
 func Filter[T any](f func(elem T) bool, c TDACola.Cola[T]) TDACola.Cola[T] {
 	cola := TDACola.CrearColaEnlazada[T]()
@@ -198,7 +191,6 @@ func superNoche(cajasAbiertas, cajasCerradas []TDACola.Cola[string]) {
 
 func main() {
 	arr := []string{"D2", "D1", "C2", "C1", "B2", "B1", "A"}
-	//arr2 := []string{"cami", "facu", "guille"}
 
 	caja_ab1 := TDACola.CrearColaEnlazada[string]()
 	caja_ab3 := TDACola.CrearColaEnlazada[string]()
