@@ -4,12 +4,12 @@ from collections import deque
 """¿Qué implica que un algoritmo de ordenamiento sea estable? Explicar detalladamente por qué el algoritmo de
 ordenamiento auxiliar de RadixSort debe ser sí o sí estable. Dar algún ejemplo en el que se evidencie esta necesidad."""
 #Que un algoritmom de ordenamiento sea estable, significa que mantiene el orden relativo en el que estaban los elementos
-#antes de ordenarlos
-#POr ejemplo, si tengo un arreglo de cartas desordenado donde tengo primero una carta negra que vale 4 y luego una
-#carta blanca que tambien vale cuatro, cuando las ordene, primero va a estar la carta roja que valia 4 y luego va a estar 
+#antes de ordenarlos.
+#POr ejemplo, si se tiene un arreglo de cartas desordenado donde primero hay una carta roja que vale 4 y luego una
+#carta blanca que tambien vale cuatro, cuando las ordene con un ordenamiento estable, primero va a estar la carta roja que valia 4 y luego va a estar 
 #la carta blanca que valia 4.
-#RadixSort debe utilizar un algoritmo de ordenamiento estable porque si no lo ultilizaramos, en cada ordenamiento
-#por los criterios de menor a mayor importancia, estariamos perdiendo el orden relativo anterior.
+#RadixSort debe utilizar un algoritmo de ordenamiento estable porque de otra manera, en cada ordenamiento
+#por los criterios de menor a mayor importancia, se estaria perdiendo el orden relativo anterior.
 #Ej: Si quisiesemos ordenar el arreglo [347, 521, 148] y en lugar de usar counting utilizaramos Quicksort que no es
 #estable, en el primer ordenamiento por las cifras de las unidades nos quedaria:
 #[321, 347, 348], luego
@@ -31,19 +31,18 @@ ordenamiento usando una resolución de orden topológico. Esta consigna no
 va sobre la posibilidad, sino por qué no es la mejor alternativa para hacerlo, a pesar de parecer una idea tentadora."""
 
 #No resolvemos ese problema de esa manera porque no mejoraria la complejidad.
-#Por ejemplo, si yo planteo resolver el problema de ordenar el arreglo [14,17, 3.1418, 2.1514, 1.24] con grafos
-#y digo bueno cada numero es un vertice y cada arista representa "V1" es menor a "V2", para agregar estas aristas
-# a cada vertice voy a tener que
-#compararlo con todos los otros vertices y agregar las aristas correspondientes, entonces el proceso de agregar 
-# todas las aristas nos esta costando O(V*V)
+#Por ejemplo, si se planteo resolver el problema de ordenar el arreglo [14,17, 3.1418, 2.1514, 1.24] con grafos
+#y se modela de manera que cada numero es un vertice y cada arista representa "V1" es menor a "V2", para agregar estas aristas
+# a cada vertice necesariamente se tiene que comparar con todos los otros vertices y agregar las aristas correspondientes, 
+# por lo que el proceso de agregar todas las aristas cuesta O(V*V)
 #Por otro lado, en espacio tambien es peor, el arreglo de enteros (en funcion de las variables del grafo), 
 # nos ocupa O(V) mientras que el grafo nos ocupa O(V+E) siendo E la cdad de aristas que haya en el grafo.
 
-#Entonces si sabemos que la cdad de vertices es igual a la cdad de elementos del arreglo, por lo que O(V) == O(N)
-#Podemos decir que armar el grafo nos esta costando O(N + N*N) y todavia nos queda realizarle
-#Un algoritmo de orden topologico, lo cual es mucho peor a hacer un ordenamiento O(nlogn) y ya.
-#Por lo tanto, si modelar este problema con grafos nos empeora la complejidad, para que hacerlo? mejor aplicar un algoritmo
-#de ordenamiento y ya.
+#Entonces si la cdad de vertices es igual a la cdad de elementos del arreglo, por lo que O(V) == O(N)
+#Armar el grafo cuesta O(N + N*N) y todavia queda realizar un algoritmo de orden topologico.
+# Esto es mucho peor a hacer un ordenamiento O(nlogn) y ya.
+#Por lo tanto, si modelar este problema con grafos nos empeora la complejidad, mejor aplicar un algoritmo
+#de ordenamiento eficiente y listo.
 
 
 """Dado un grafo no dirigido, pesado con todas aristas de pesos diferentes, implementar un algoritmo que reciba 
